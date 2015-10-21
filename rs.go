@@ -18,7 +18,6 @@ package rs
 
 import "fmt"
 
-// ------------------------------------------------------------------------------
 // the Galois Group GG(2^8) with characteristic polynomial x^8 + x^4 + x^3 + x^2 + 1
 const (
 	cp_84320 = 1<<8 | 1<<4 | 1<<3 | 1<<2 | 1<<0
@@ -86,8 +85,6 @@ func mult(a, b uint8) uint8 {
 	}
 	return exp[idx]
 }
-
-// ------------------------------------------------------------------------------
 
 type ErasureCoder struct {
 	interp [][]uint8 // the Lagrange interpolation factors
